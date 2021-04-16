@@ -50,7 +50,6 @@ public class CustomGridItemDecoration extends RecyclerView.ItemDecoration {
             final int right = child.getRight() + params.rightMargin;
             final int top = child.getBottom() + params.bottomMargin;
             final int bottom = top + mDivider.getIntrinsicHeight();
-            Log.d(TAG, "drawHorizontal: " + left + " " + top + " " + right + " " + bottom);
             mDivider.setBounds(left, top, right, bottom);
             mDivider.draw(c);
         }
@@ -65,7 +64,6 @@ public class CustomGridItemDecoration extends RecyclerView.ItemDecoration {
             final int bottom = child.getBottom() + params.bottomMargin + mDivider.getIntrinsicHeight();
             final int left = child.getRight() + params.rightMargin;
             final int right = left + mDivider.getIntrinsicHeight();
-            Log.d(TAG, "drawVertical: " + left + " " + top + " " + right + " " + bottom);
             mDivider.setBounds(left, top, right, bottom);
             mDivider.draw(c);
         }
