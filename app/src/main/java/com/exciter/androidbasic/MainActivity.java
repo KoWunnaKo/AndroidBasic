@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import com.exciter.androidbasic.cardview.CardViewActivity;
+import com.exciter.androidbasic.notification.NotificationActivity;
 import com.exciter.androidbasic.recyclerview.RecyclerViewActivity;
 
 import java.util.ArrayList;
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         mData.add("RecyclerView");
         mData.add("CardView");
+        mData.add("Notification");
         mHomeAdapter.notifyDataSetChanged();
     }
 
@@ -45,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 1:
                     startActivity(new Intent(MainActivity.this, CardViewActivity.class));
+                    break;
+                case 2:
+                    startActivity(new Intent(MainActivity.this, NotificationActivity.class));
                     break;
                 default:
                     break;

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".notification.NotificationActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_notify_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通知级别" />
+
+        <RadioButton
+            android:id="@+id/rb_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="MAX"
+            android:textSize="8dp" />
+
+        <RadioButton
+            android:id="@+id/rb_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HIGH"
+            android:textSize="8dp" />
+
+        <RadioButton
+            android:id="@+id/rb_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEFAULT"
+            android:textSize="8dp" />
+
+        <RadioButton
+            android:id="@+id/rb_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOW"
+            android:textSize="8dp" />
+
+        <RadioButton
+            android:id="@+id/rb_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MIN"
+            android:textSize="8dp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_lock_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="锁屏可见级别" />
+
+        <RadioButton
+            android:id="@+id/rb_public"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="PUBLIC"
+            android:textSize="8dp" />
+
+        <RadioButton
+            android:id="@+id/rb_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRIVATE"
+            android:textSize="8dp" />
+
+        <RadioButton
+            android:id="@+id/rb_secret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SECRET"
+            android:textSize="8dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="普通通知" />
+
+    <Button
+        android:id="@+id/btn_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="带操作按钮的通知" />
+
+    <Button
+        android:id="@+id/btn_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="带进度条的通知" />
+
+    <Button
+        android:id="@+id/btn_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="大图片通知(展开通知)" />
+
+    <Button
+        android:id="@+id/btn_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="大文本通知(展开通知)" />
+
+    <Button
+        android:id="@+id/btn_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="收件箱样式通知(展开通知)" />
+
+    <Button
+        android:id="@+id/btn_07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="自定义通知1" />
+
+    <Button
+        android:id="@+id/btn_08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="自定义通知2(展开通知)" />
+
+    <Button
+        android:id="@+id/btn_09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="自定义通知3(展开通知)" />
+
+</LinearLayout>

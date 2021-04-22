@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasic">
-        <activity android:name=".cardview.CardViewActivity"></activity>
+        <activity android:name=".notification.NotificationActivity"></activity>
+        <activity android:name=".cardview.CardViewActivity" />
         <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
