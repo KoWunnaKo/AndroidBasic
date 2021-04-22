@@ -24,6 +24,9 @@ import java.util.concurrent.TimeUnit;
 
 import static android.app.Notification.VISIBILITY_SECRET;
 
+/**
+ * https://blog.csdn.net/shanshui911587154/article/details/105683683
+ */
 public class NotificationActivity extends AppCompatActivity {
 
     private RadioGroup mRgLockVisibleLevel;
