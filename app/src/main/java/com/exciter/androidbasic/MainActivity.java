@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.exciter.androidbasic.cardview.CardViewActivity;
 import com.exciter.androidbasic.recyclerview.RecyclerViewActivity;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         mData.add("RecyclerView");
+        mData.add("CardView");
         mHomeAdapter.notifyDataSetChanged();
     }
 
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
             switch (position) {
                 case 0:
                     startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+                    break;
+                case 1:
+                    startActivity(new Intent(MainActivity.this, CardViewActivity.class));
                     break;
                 default:
                     break;
