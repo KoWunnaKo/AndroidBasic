@@ -8,9 +8,11 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.exciter.androidbasic.cardview.CardViewActivity;
+import com.exciter.androidbasic.floatingactionbutton.FloatingActionButtonActivity;
 import com.exciter.androidbasic.notification.NotificationActivity;
 import com.exciter.androidbasic.recyclerview.RecyclerViewActivity;
 import com.exciter.androidbasic.snackbar.SnackBarActivity;
+import com.exciter.androidbasic.textinputlayout.TextInputLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         mData.add("CardView");
         mData.add("Notification");
         mData.add("Snackbar");
+        mData.add("TextInputLayout");
+        mData.add("FloatingActionButton");
         mHomeAdapter.notifyDataSetChanged();
     }
 
@@ -54,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 3:
                     startActivity(new Intent(MainActivity.this, SnackBarActivity.class));
+                    break;
+                case 4:
+                    startActivity(new Intent(MainActivity.this, TextInputLayoutActivity.class));
+                    break;
+                case 5:
+                    startActivity(new Intent(MainActivity.this, FloatingActionButtonActivity.class));
                     break;
                 default:
                     break;
