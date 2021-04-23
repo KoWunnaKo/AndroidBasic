@@ -1,6 +1,7 @@
 package com.exciter.androidbasic.notification;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
 
 import android.annotation.SuppressLint;
@@ -24,9 +25,6 @@ import java.util.concurrent.TimeUnit;
 
 import static android.app.Notification.VISIBILITY_SECRET;
 
-/**
- * https://blog.csdn.net/shanshui911587154/article/details/105683683
- */
 public class NotificationActivity extends AppCompatActivity {
 
     private RadioGroup mRgLockVisibleLevel;
@@ -45,6 +43,9 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        Toolbar toolbar = findViewById(R.id.tool_bar);
+        toolbar.setTitle("通知");
+        toolbar.setNavigationOnClickListener( v -> finish());
         mRgLockVisibleLevel = findViewById(R.id.rg_lock_level);
         mRgNotifyLevel = findViewById(R.id.rg_notify_level);
         findViewById(R.id.btn_01).setOnClickListener(v -> createNotification01());
