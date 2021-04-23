@@ -12,7 +12,9 @@ import com.exciter.androidbasic.floatingactionbutton.FloatingActionButtonActivit
 import com.exciter.androidbasic.notification.NotificationActivity;
 import com.exciter.androidbasic.recyclerview.RecyclerViewActivity;
 import com.exciter.androidbasic.snackbar.SnackBarActivity;
+import com.exciter.androidbasic.tablayout.TabLayoutActivity;
 import com.exciter.androidbasic.textinputlayout.TextInputLayoutActivity;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mData.add("Snackbar");
         mData.add("TextInputLayout");
         mData.add("FloatingActionButton");
+        mData.add("TabLayout");
         mHomeAdapter.notifyDataSetChanged();
     }
 
@@ -64,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 5:
                     startActivity(new Intent(MainActivity.this, FloatingActionButtonActivity.class));
+                    break;
+                case 6:
+                    startActivity(new Intent(MainActivity.this, TabLayoutActivity.class));
                     break;
                 default:
                     break;
