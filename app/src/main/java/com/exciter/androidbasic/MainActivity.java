@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import com.exciter.androidbasic.cardview.CardViewActivity;
 import com.exciter.androidbasic.floatingactionbutton.FloatingActionButtonActivity;
+import com.exciter.androidbasic.navigationview.NavigationViewActivity;
 import com.exciter.androidbasic.notification.NotificationActivity;
 import com.exciter.androidbasic.recyclerview.RecyclerViewActivity;
 import com.exciter.androidbasic.snackbar.SnackBarActivity;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mData.add("TextInputLayout");
         mData.add("FloatingActionButton");
         mData.add("TabLayout");
+        mData.add("NavigationView");
         mHomeAdapter.notifyDataSetChanged();
     }
 
@@ -70,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 6:
                     startActivity(new Intent(MainActivity.this, TabLayoutActivity.class));
+                    break;
+                case 7:
+                    startActivity(new Intent(MainActivity.this, NavigationViewActivity.class));
                     break;
                 default:
                     break;
