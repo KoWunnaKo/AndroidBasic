@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasic">
-        <activity android:name=".coordinatorlayout.CoordinatorLayoutActivity"></activity>
-        <activity android:name=".navigationview.NavigationViewActivity" />
-        <activity android:name=".tablayout.TabLayoutActivity" />
-        <activity android:name=".floatingactionbutton.FloatingActionButtonActivity" />
-        <activity android:name=".textinputlayout.TextInputLayoutActivity" />
-        <activity android:name=".snackbar.SnackBarActivity" />
-        <activity android:name=".notification.NotificationActivity" />
-        <activity android:name=".cardview.CardViewActivity" />
-        <activity android:name=".recyclerview.RecyclerViewActivity" />
+        <activity android:name=".widget.coordinatorlayout.CoordinatorLayoutActivity"></activity>
+        <activity android:name=".widget.navigationview.NavigationViewActivity" />
+        <activity android:name=".widget.tablayout.TabLayoutActivity" />
+        <activity android:name=".widget.floatingactionbutton.FloatingActionButtonActivity" />
+        <activity android:name=".widget.textinputlayout.TextInputLayoutActivity" />
+        <activity android:name=".widget.snackbar.SnackBarActivity" />
+        <activity android:name=".widget.notification.NotificationActivity" />
+        <activity android:name=".widget.cardview.CardViewActivity" />
+        <activity android:name=".widget.recyclerview.RecyclerViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

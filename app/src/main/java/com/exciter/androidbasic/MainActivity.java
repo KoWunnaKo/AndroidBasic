@@ -7,16 +7,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.exciter.androidbasic.cardview.CardViewActivity;
-import com.exciter.androidbasic.coordinatorlayout.CoordinatorLayoutActivity;
-import com.exciter.androidbasic.floatingactionbutton.FloatingActionButtonActivity;
-import com.exciter.androidbasic.navigationview.NavigationViewActivity;
-import com.exciter.androidbasic.notification.NotificationActivity;
-import com.exciter.androidbasic.recyclerview.RecyclerViewActivity;
-import com.exciter.androidbasic.snackbar.SnackBarActivity;
-import com.exciter.androidbasic.tablayout.TabLayoutActivity;
-import com.exciter.androidbasic.textinputlayout.TextInputLayoutActivity;
-import com.google.android.material.tabs.TabLayout;
+import com.exciter.androidbasic.widget.cardview.CardViewActivity;
+import com.exciter.androidbasic.widget.coordinatorlayout.CoordinatorLayoutActivity;
+import com.exciter.androidbasic.widget.floatingactionbutton.FloatingActionButtonActivity;
+import com.exciter.androidbasic.widget.navigationview.NavigationViewActivity;
+import com.exciter.androidbasic.widget.notification.NotificationActivity;
+import com.exciter.androidbasic.widget.recyclerview.RecyclerViewActivity;
+import com.exciter.androidbasic.widget.snackbar.SnackBarActivity;
+import com.exciter.androidbasic.widget.tablayout.TabLayoutActivity;
+import com.exciter.androidbasic.widget.textinputlayout.TextInputLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
