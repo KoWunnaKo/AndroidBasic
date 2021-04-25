@@ -2,7 +2,6 @@ package com.exciter.androidbasic.navigationview;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -31,9 +30,11 @@ public class NavigationViewActivity extends AppCompatActivity {
         TextView tvContent = findViewById(R.id.tv_content);
         Toolbar toolbar = findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,mDrawerLayout,0,0);
-        mDrawerLayout.setDrawerListener(toggle);
-        toggle.syncState();
+        ActionBar actionBar = getSupportActionBar();
+        if (null != actionBar) {
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_back_white);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(item -> {
             item.setChecked(true);
