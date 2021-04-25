@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasic">
-        <activity android:name=".navigationview.NavigationViewActivity"></activity>
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutActivity"></activity>
+        <activity android:name=".navigationview.NavigationViewActivity" />
         <activity android:name=".tablayout.TabLayoutActivity" />
         <activity android:name=".floatingactionbutton.FloatingActionButtonActivity" />
         <activity android:name=".textinputlayout.TextInputLayoutActivity" />

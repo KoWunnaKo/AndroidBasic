@@ -1,4 +1,6 @@
-package com.exciter.androidbasic.tablayout;
+package com.exciter.androidbasic.coordinatorlayout;
+
+import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,13 +12,13 @@ import java.util.List;
 
 public class FragmentAdapter extends FragmentStatePagerAdapter {
 
-    private final List<Fragment> mFragments;
-    private final List<String> mTitles;
+    private List<String> mTitles;
+    private List<Fragment> mFragments;
 
-    public FragmentAdapter(FragmentManager fm, List<Fragment> fragments, List<String> titles) {
-        super(fm, FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        this.mFragments = fragments;
-        this.mTitles = titles;
+    public FragmentAdapter(@NonNull FragmentManager fm, int behavior, List<String> mTitles, List<Fragment> mFragments) {
+        super(fm, behavior);
+        this.mTitles = mTitles;
+        this.mFragments = mFragments;
     }
 
     @NonNull
@@ -33,6 +35,6 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return mTitles.get(position);
+        return TextUtils.isEmpty(mTitles.get(position))?"":mTitles.get(position);
     }
 }

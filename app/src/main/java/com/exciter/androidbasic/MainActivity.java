@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.exciter.androidbasic.cardview.CardViewActivity;
+import com.exciter.androidbasic.coordinatorlayout.CoordinatorLayoutActivity;
 import com.exciter.androidbasic.floatingactionbutton.FloatingActionButtonActivity;
 import com.exciter.androidbasic.navigationview.NavigationViewActivity;
 import com.exciter.androidbasic.notification.NotificationActivity;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mData.add("FloatingActionButton");
         mData.add("TabLayout");
         mData.add("NavigationView");
+        mData.add("CoordinatorLayout");
         mHomeAdapter.notifyDataSetChanged();
     }
 
@@ -75,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 7:
                     startActivity(new Intent(MainActivity.this, NavigationViewActivity.class));
+                    break;
+                case 8:
+                    startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
                     break;
                 default:
                     break;
