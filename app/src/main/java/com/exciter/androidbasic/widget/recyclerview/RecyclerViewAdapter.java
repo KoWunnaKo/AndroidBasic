@@ -34,17 +34,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         if (null != mData) {
-            holder.mTvTitle.setText(TextUtils.isEmpty(mData.get(position).getTitle()) ? "no title" : mData.get(position).getTitle());
+            //设置数据
+            holder.mTvTitle.setText(!TextUtils.isEmpty(mData.get(position).getTitle()) ? mData.get(position).getTitle() : "no title");
             ViewGroup.LayoutParams params = holder.mTvTitle.getLayoutParams();
             params.height = mData.get(position).getHeight();
             holder.mTvTitle.setLayoutParams(params);
         }
         if (null != mOnItemClickListener) {
+            //item添加点击事件
             holder.itemView.setOnClickListener(v -> mOnItemClickListener.onItemClick(holder.itemView, position));
+            //item添加长按事件
             holder.itemView.setOnLongClickListener(v -> {
                 mOnItemClickListener.onItemLongClick(holder.itemView, position);
                 return false;
             });
+            //item子view添加点击事件
             holder.mTvTitle.setOnClickListener(v -> mOnItemClickListener.onItemChildClick(holder.mTvTitle, position));
         }
     }

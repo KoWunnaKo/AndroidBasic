@@ -12,12 +12,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomLinearItemDecoration extends RecyclerView.ItemDecoration {
 
+    /**
+     * 纵向布局
+     */
     public static final int VERTICAL_LIST = LinearLayoutManager.VERTICAL;
+    /**
+     * 横向布局
+     */
     public static final int HORIZONTAL_LIST = LinearLayoutManager.HORIZONTAL;
     private final Drawable mDivider;
     private int mOrientation;
     private final int mIndent;
 
+    /**
+     * 构造方法
+     *
+     * @param context     上下文
+     * @param orientation 列表方向
+     * @param drawable    分割线样式
+     * @param indent      缩进值
+     */
     public CustomLinearItemDecoration(Context context, int orientation, int drawable, int indent) {
         mDivider = context.getResources().getDrawable(drawable);
         this.mIndent = indent;
@@ -50,6 +64,12 @@ public class CustomLinearItemDecoration extends RecyclerView.ItemDecoration {
         }
     }
 
+    /**
+     * 绘制纵向列表的分割线
+     *
+     * @param c      画布
+     * @param parent 画笔
+     */
     private void drawVertical(Canvas c, RecyclerView parent) {
         final int left = parent.getPaddingLeft();
         final int right = parent.getWidth() - parent.getPaddingRight();
@@ -64,6 +84,12 @@ public class CustomLinearItemDecoration extends RecyclerView.ItemDecoration {
         }
     }
 
+    /**
+     * 绘制横向列表的分割线
+     *
+     * @param c      画布
+     * @param parent 画笔
+     */
     private void drawHorizontal(Canvas c, RecyclerView parent) {
         final int top = parent.getPaddingTop();
         final int bottom = parent.getHeight() - parent.getPaddingBottom();

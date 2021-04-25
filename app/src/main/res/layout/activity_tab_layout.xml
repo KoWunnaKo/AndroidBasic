@@ -24,10 +24,11 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            app:tabIndicatorHeight="2dp"
-            app:tabTextColor="@android:color/holo_green_light"
             android:layout_height="wrap_content"
-            app:tabMode="scrollable" />
+            app:tabIndicatorColor="@android:color/holo_green_light"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="scrollable"
+            app:tabTextColor="@android:color/black" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

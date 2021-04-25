@@ -15,6 +15,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/tool_bar"
             android:layout_width="match_parent"
+            app:titleTextColor="@color/white"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="enterAlways|scroll" />
@@ -24,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabIndicator="@android:color/holo_orange_light"
+            app:tabIndicatorHeight="2dp"
             app:tabMode="scrollable" />
 
     </com.google.android.material.appbar.AppBarLayout>

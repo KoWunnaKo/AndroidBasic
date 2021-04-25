@@ -1,5 +1,6 @@
 package com.exciter.androidbasic.widget.coordinatorlayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,6 +9,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.exciter.androidbasic.R;
 import com.google.android.material.tabs.TabLayout;
@@ -32,6 +35,7 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
         final ActionBar actionBar = getSupportActionBar();
         if (null != actionBar) {
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_back_white);
         }
         mTabLayout = findViewById(R.id.tab_layout);
         initViewPager();
@@ -59,5 +63,14 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
         mViewPager.setAdapter(fragmentAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
         mTabLayout.setTabsFromPagerAdapter(fragmentAdapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

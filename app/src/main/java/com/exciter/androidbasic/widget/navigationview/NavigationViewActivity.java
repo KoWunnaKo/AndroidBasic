@@ -32,7 +32,7 @@ public class NavigationViewActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (null != actionBar) {
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_back_white);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
         NavigationView navigationView = findViewById(R.id.navigation_view);

@@ -1,6 +1,7 @@
 package com.exciter.androidbasic.widget.cardview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
@@ -20,6 +21,9 @@ public class CardViewActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        Toolbar toolbar = findViewById(R.id.tool_bar);
+        toolbar.setTitle("CardView");
+        toolbar.setNavigationOnClickListener(v -> finish());
         mCardView = findViewById(R.id.card_view);
         SeekBar mSeekBar01 = findViewById(R.id.seek_bar_01);
         SeekBar mSeekBar02 = findViewById(R.id.seek_bar_02);

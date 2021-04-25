@@ -2,6 +2,8 @@ package com.exciter.androidbasic.widget.recyclerview;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -30,7 +32,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
     private void initData() {
         for (int i = 0; i < 30; i++) {
             ItemBean bean = new ItemBean();
-            bean.setTitle("数据" + i);
+            bean.setTitle("item" + i);
             bean.setHeight((int) (100 + Math.random() * 300));
             mData.add(bean);
         }
@@ -38,6 +40,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        Toolbar toolbar = findViewById(R.id.tool_bar);
+        toolbar.setTitle("RecyclerView");
+        toolbar.setNavigationOnClickListener(v -> finish());
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
 //        LinearLayoutManager manager = new LinearLayoutManager(this);
 //        manager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -45,6 +50,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
         StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(manager);
         recyclerView.addItemDecoration(new CustomGridItemDecoration(this, R.drawable.divider_custom));
+//        recyclerView.addItemDecoration(new CustomLinearItemDecoration(this,
+//                CustomLinearItemDecoration.VERTICAL_LIST, R.drawable.divider_custom, 10));
         mRecyclerViewAdapter = new RecyclerViewAdapter(this, mData);
         recyclerView.setAdapter(mRecyclerViewAdapter);
         mRecyclerViewAdapter.setOnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {

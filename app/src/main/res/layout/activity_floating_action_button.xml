@@ -16,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_like"
+        android:backgroundTint="@android:color/holo_blue_light"
         android:layout_margin="50dp"
         android:elevation="3dp"
         app:pressedTranslationZ="5dp"

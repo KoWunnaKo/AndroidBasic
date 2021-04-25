@@ -20,6 +20,7 @@ public class VolatileTest {
             }.start();
         }
 
+        //如果有子线程就让出资源，保证所有子线程都执行完
         while (Thread.activeCount() > 2) {
             Thread.yield();
         }

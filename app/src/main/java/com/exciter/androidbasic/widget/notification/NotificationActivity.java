@@ -66,7 +66,7 @@ public class NotificationActivity extends AppCompatActivity {
         mNotificationTitle = "普通通知";
         mNotificationText = "这是普通通知的内容这是普通通知的内容这是普通通知的内容这是普通通知的内容这是普通通知的内容这是普通通知的内容";
         NotificationCompat.Builder builder = getNotificationBuilder();
-        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.notification));
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_android));
         getNotificationManager().notify(1, builder.build());
     }
 
@@ -79,7 +79,7 @@ public class NotificationActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.so.com"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
         NotificationCompat.Builder builder = getNotificationBuilder();
-        builder.addAction(R.drawable.notification, "跳转到360搜索", pendingIntent);
+        builder.addAction(R.drawable.ic_android, "跳转到360搜索", pendingIntent);
         getNotificationManager().notify(2, builder.build());
     }
 
@@ -196,7 +196,7 @@ public class NotificationActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.baidu.com"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
         builder.setContentIntent(pendingIntent)
-                .setSmallIcon(R.drawable.notification)
+                .setSmallIcon(R.drawable.ic_android)
                 .setContentTitle(mNotificationTitle)
                 .setContentText(mNotificationText)
                 .setAutoCancel(true);
