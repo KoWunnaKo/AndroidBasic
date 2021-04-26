@@ -15,13 +15,21 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_like"
-        android:backgroundTint="@android:color/holo_blue_light"
         android:layout_margin="50dp"
-        android:elevation="3dp"
-        app:pressedTranslationZ="5dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:backgroundTintMode="screen"
         android:clickable="true"
+        android:src="@drawable/ic_like"
+        app:borderWidth="0dp"
+        app:elevation="2dp"
+        app:fabCustomSize="50dp"
+        app:fabSize="auto"
+        app:hoveredFocusedTranslationZ="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:maxImageSize="30dp"
+        app:pressedTranslationZ="5dp"
+        app:rippleColor="@android:color/holo_red_light"
+        app:useCompatPadding="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
