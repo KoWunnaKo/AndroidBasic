@@ -27,7 +27,13 @@ public class SnackBarActivity extends AppCompatActivity {
 
     private void showSnackBar() {
         Snackbar.make(mRootView, "这是一个Snackbar", Snackbar.LENGTH_SHORT)
+                //设置文本颜色
+                .setTextColor(getResources().getColor(android.R.color.holo_orange_dark))
+                //设置一个Action
                 .setAction("click", v -> Toast.makeText(SnackBarActivity.this, "点击了Snackbar", Toast.LENGTH_SHORT).show())
+                //设置Action按钮文本颜色
+                .setActionTextColor(getResources().getColor(R.color.white))
+                //显示Snackbar
                 .show();
     }
 }
