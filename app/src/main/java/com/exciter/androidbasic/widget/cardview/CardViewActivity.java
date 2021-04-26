@@ -48,7 +48,7 @@ public class CardViewActivity extends AppCompatActivity {
         mSeekBar02.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mCardView.setElevation(progress);
+                mCardView.setCardElevation(progress);
             }
 
             @Override
