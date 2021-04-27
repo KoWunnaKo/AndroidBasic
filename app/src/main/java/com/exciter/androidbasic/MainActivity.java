@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.exciter.androidbasic.http.HttpActivity;
+import com.exciter.androidbasic.http.volley.VolleyActivity;
 import com.exciter.androidbasic.widget.cardview.CardViewActivity;
 import com.exciter.androidbasic.widget.coordinatorlayout.CoordinatorLayoutActivity;
 import com.exciter.androidbasic.widget.floatingactionbutton.FloatingActionButtonActivity;
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         mData.add("TabLayout");
         mData.add("NavigationView");
         mData.add("CoordinatorLayout");
+        mData.add("Http");
+        mData.add("Http:volley");
         mHomeAdapter.notifyDataSetChanged();
     }
 
@@ -79,6 +83,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 8:
                     startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+                    break;
+                case 9:
+                    startActivity(new Intent(MainActivity.this, HttpActivity.class));
+                    break;
+                case 10:
+                    startActivity(new Intent(MainActivity.this, VolleyActivity.class));
                     break;
                 default:
                     break;

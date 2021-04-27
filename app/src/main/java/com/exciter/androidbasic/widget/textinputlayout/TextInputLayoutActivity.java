@@ -23,16 +23,13 @@ public class TextInputLayoutActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(v -> finish());
         TextInputLayout inputPassword = findViewById(R.id.input_password);
         TextInputEditText etPassword = findViewById(R.id.et_password);
-        findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean validate = validatePassword(Objects.requireNonNull(etPassword.getText()).toString());
-                if (!validate) {
-                    inputPassword.setErrorEnabled(true);
-                    inputPassword.setError("请输入6位以上密码");
-                } else {
-                    inputPassword.setErrorEnabled(false);
-                }
+        findViewById(R.id.btn_login).setOnClickListener(v -> {
+            boolean validate = validatePassword(Objects.requireNonNull(etPassword.getText()).toString());
+            if (!validate) {
+                inputPassword.setErrorEnabled(true);
+                inputPassword.setError("请输入6位以上密码");
+            } else {
+                inputPassword.setErrorEnabled(false);
             }
         });
     }
